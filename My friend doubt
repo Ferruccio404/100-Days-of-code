@@ -1,0 +1,29 @@
+
+#include<iostream>
+using namespace std;
+int main(){
+	int arr[3]={2,9,10};
+	int arr2[3];
+	//int a=;
+	for(int i=0;i<3;i++){
+	int a=i;
+		while(a<3){
+		if(arr[i]<arr[a]){
+			//	break;
+				arr2[i]=arr[a];
+				break;
+			   }
+			   a++;
+			   arr2[i]=-1;
+		//	else{
+			    //arr[i]=-1;
+		//	}
+		
+		    
+		}
+		
+	}
+	
+		for(int i=0;i<3;i++){
+			cout<<arr2[i];
+		}}	
