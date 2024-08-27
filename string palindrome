@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void reverse(string arr[],int size){
+	int a=0;
+	int b=size-1;
+	while(a<b && b>=0){
+		swap(arr[a],arr[b]);
+		a++;
+		b--;
+	}
+}
+bool same(string arr[],string arr1[],int size){
+	for(int i=0;i<size;i++){
+		if(arr[i]!=arr1[i]){
+			return false;
+		}
+	}
+	return true;
+}
+
+int main(){
+	string a;
+	cout<<"Enter The string to be checked of palindrome ";
+	cin>>a;
+	int size=a.size();
+	string arr[size],arr2[size];
+	for(int i=0;i<size;i++){
+		arr[i]=a[i];
+		arr2[i]=a[i];
+	}
+	reverse(arr2,size);
+	bool check=same(arr,arr2,size);
+	if(check){
+		cout<<"palindrom";
+	}
+	else{
+		cout<<"Not palindrome";
+	}
+}
+
